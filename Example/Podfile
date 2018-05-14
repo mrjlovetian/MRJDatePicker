@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MRJDatePicker_Tests' do
+  pod 'MRJDatePicker', :path => '../'
+  
+  
+end
