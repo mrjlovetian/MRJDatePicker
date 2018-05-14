@@ -1,0 +1,6 @@
+framework module MRJDatePicker {
+  umbrella header "MRJDatePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

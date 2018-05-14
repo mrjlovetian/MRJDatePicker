@@ -97,36 +97,36 @@ static NSDateFormatter *displayFormatter;
     NSString *tempStr;
     if(NSIntegerweekday == 1)
     {
-        tempStr =@"Sunday".local_basic;
+        tempStr =@"Sunday";
     }
     if(NSIntegerweekday == 2)
     {
-        tempStr =@"Monday".local_basic;
+        tempStr =@"Monday";
         
     }
     if(NSIntegerweekday == 3)
     {
-        tempStr =@"Tuesday".local_basic;
+        tempStr =@"Tuesday";
         
     }
     if(NSIntegerweekday == 4)
     {
-        tempStr =@"Wednesday".local_basic;
+        tempStr =@"Wednesday";
         
     }
     if(NSIntegerweekday == 5)
     {
-        tempStr =@"Thursday".local_basic;
+        tempStr =@"Thursday";
         
     }
     if(NSIntegerweekday == 6)
     {
-        tempStr =@"Friday".local_basic;
+        tempStr =@"Friday";
         
     }
     if(NSIntegerweekday == 7)
     {
-        tempStr =@"Saturday".local_basic;
+        tempStr =@"Saturday";
         
     }
     

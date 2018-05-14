@@ -1,0 +1,999 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01753ABA4CF6FEB14D5E3A93A2BC1501 /* NSDate+MRJDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCC1391414B5D267F8AC7A86A7EEA8 /* NSDate+MRJDatePicker.m */; };
+		0E875CA8DB1B6716D6B6D86CED2033AB /* UIColor+MRJAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 225643BB20DD3446DDBB92DB2CB35052 /* UIColor+MRJAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FDEB097E481EEE16D71C73D578985B9 /* MRJUIColorAdditions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60563BBB582889537D061ED514E0FED1 /* MRJUIColorAdditions-dummy.m */; };
+		123D07113ADDD8F2AC36256B803835BB /* UIColor+MRJAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084708E4EAAD747D38E3FC443FC3397 /* UIColor+MRJAdditions.m */; };
+		1F2E1605D2DF133B3D224FBFB49ED117 /* NSDate+MRJDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = EBB62EDE3AE5C75CF6D0DD559C081004 /* NSDate+MRJDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B04F122807265953B6EDA373ACABFC4 /* MRJUIColorAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A872984BADD6F4134C1874D0F3082E /* MRJUIColorAdditions.framework */; };
+		3B1293BB60E662048CEBE8CEF75DD6FD /* UIViewMRJFrame-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D0B1F6539A301F930B66D8E76DCD6B6 /* UIViewMRJFrame-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CCC7B5CDA22A9B6AC67C61DAA8C2159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3740DF8E6E1ED99C3CCE9255A998D81 /* Foundation.framework */; };
+		4F79C32CF6C1DCD4D48649B6EACDDF80 /* MRJDatePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FEFA787BCEBD3F13317AF5B66E4179 /* MRJDatePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CF430D60AB4880F797D7A5F7AF030BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3740DF8E6E1ED99C3CCE9255A998D81 /* Foundation.framework */; };
+		5DF08D818694D9A289C1B40585665246 /* MRJDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4EA046E0CDE4BBE550C383C34E6AF /* MRJDatePicker.m */; };
+		659AD5AE1C7657B1C4AE2F9B7DE71C70 /* UIViewMRJFrame-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DD6E711A70664DCD945A16CB2CD82 /* UIViewMRJFrame-dummy.m */; };
+		77E952BC28F89123AC1DE9A110F85FF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3740DF8E6E1ED99C3CCE9255A998D81 /* Foundation.framework */; };
+		88D36D6084CEAD1E796C3DF9A83EFB04 /* MRJDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C15BE7DBFD50B5F658A2210261E1C91F /* MRJDatePicker-dummy.m */; };
+		9D067E1528BDD7D12A332027902B76A7 /* Pods-MRJDatePicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 570C8F1D1493F9CF640BC48F9141A4C7 /* Pods-MRJDatePicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD4BF9D95690833E4D1206715A401720 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3740DF8E6E1ED99C3CCE9255A998D81 /* Foundation.framework */; };
+		C3033CABC5E777A78B71158C10EB7565 /* MRJDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C2184C2E45EAFF42CFCE88323433987 /* MRJDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F463A88FBE75CE5BA314A2046D044D /* UIView+MRJFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = D2575AB2B63A15E135D01AAAFFE511E6 /* UIView+MRJFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF8022A61D42DA6DE589CC010ACD583 /* MRJUIColorAdditions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97825A11B3646618E1F0517BD7AB6814 /* MRJUIColorAdditions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DED6B133237719896737B2D7B2ADFCDF /* UIView+MRJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 071B0AC6CB0FB80B127E724871D693B3 /* UIView+MRJFrame.m */; };
+		E718204020A94153000937D4 /* NSDate+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = E718203E20A94153000937D4 /* NSDate+Helper.h */; };
+		E718204120A94153000937D4 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E718203F20A94153000937D4 /* NSDate+Helper.m */; };
+		ED5BE74097EBC288FCCEB5948FA8E71A /* UIViewMRJFrame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E302BA554D77A0B35C3A84691673158 /* UIViewMRJFrame.framework */; };
+		F18D64B70F5BBCFC258D2AEB7C90D2E9 /* Pods-MRJDatePicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B506A41A9FD28F4A352189D2FFE04C /* Pods-MRJDatePicker_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41360940758F087EC649B44A79183208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5977570B9F6E9EF7FE716797231333C9;
+			remoteInfo = MRJUIColorAdditions;
+		};
+		64BA24FE813A316893AE56428E24D46D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D871B6FAD5DF161520F7A9F4E31E173;
+			remoteInfo = MRJDatePicker;
+		};
+		8B99DECEEA73C1183978AC02CFF0F597 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCCEB15A21FDDB862E12A7E16275B128;
+			remoteInfo = UIViewMRJFrame;
+		};
+		B93CD7B6D984A21A22DC55E2E0C27AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5977570B9F6E9EF7FE716797231333C9;
+			remoteInfo = MRJUIColorAdditions;
+		};
+		C887C96B08DC59275F651F816BB3611C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCCEB15A21FDDB862E12A7E16275B128;
+			remoteInfo = UIViewMRJFrame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0307735D0D53976B11948959ED5CB6CF /* MRJDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJDatePicker.xcconfig; sourceTree = "<group>"; };
+		071B0AC6CB0FB80B127E724871D693B3 /* UIView+MRJFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MRJFrame.m"; path = "UIViewMRJFrame/Classes/UIView+MRJFrame.m"; sourceTree = "<group>"; };
+		08DFD791A406C49DCC038BB0E75AB771 /* Pods_MRJDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRJDatePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E302BA554D77A0B35C3A84691673158 /* UIViewMRJFrame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIViewMRJFrame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7DD6E711A70664DCD945A16CB2CD82 /* UIViewMRJFrame-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewMRJFrame-dummy.m"; sourceTree = "<group>"; };
+		1C2184C2E45EAFF42CFCE88323433987 /* MRJDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRJDatePicker.h; path = MRJDatePicker/Classes/MRJDatePicker.h; sourceTree = "<group>"; };
+		1EF604BD3818726B3AB09209F36BFDD9 /* MRJDatePicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = MRJDatePicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1F83617A5D0EB3D969504D655FE9CE3D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		214ADF21255DB7BC32895793695192EF /* StringMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StringMacro.h; path = MRJTool/Classes/Marco/StringMacro.h; sourceTree = "<group>"; };
+		225643BB20DD3446DDBB92DB2CB35052 /* UIColor+MRJAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+MRJAdditions.h"; path = "MRJUIColorAdditions/Classes/UIColor+MRJAdditions.h"; sourceTree = "<group>"; };
+		2407B9E78894BE4867265768C3526F88 /* UIViewMRJFrame.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIViewMRJFrame.modulemap; sourceTree = "<group>"; };
+		3215D2844709BDDDB3CEC30D05AA270B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E14D7B04CC4BFA1E17E1E018D9FCCD9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42EDF98A7A9F176CC24B313A4086929A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43BCC1391414B5D267F8AC7A86A7EEA8 /* NSDate+MRJDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MRJDatePicker.m"; path = "MRJDatePicker/Classes/NSDate+MRJDatePicker.m"; sourceTree = "<group>"; };
+		4A98BBA4D3B6AB1EFF2CD0CBB3BB9C16 /* Pods-MRJDatePicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRJDatePicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		54A872984BADD6F4134C1874D0F3082E /* MRJUIColorAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJUIColorAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		570C8F1D1493F9CF640BC48F9141A4C7 /* Pods-MRJDatePicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRJDatePicker_Tests-umbrella.h"; sourceTree = "<group>"; };
+		580FA1A9F2580B8F9F278C8FCDAA0476 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5C684A93CAD886FA69293172AF9B7377 /* Pods-MRJDatePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJDatePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5ED4EA046E0CDE4BBE550C383C34E6AF /* MRJDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRJDatePicker.m; path = MRJDatePicker/Classes/MRJDatePicker.m; sourceTree = "<group>"; };
+		60563BBB582889537D061ED514E0FED1 /* MRJUIColorAdditions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJUIColorAdditions-dummy.m"; sourceTree = "<group>"; };
+		6084708E4EAAD747D38E3FC443FC3397 /* UIColor+MRJAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MRJAdditions.m"; path = "MRJUIColorAdditions/Classes/UIColor+MRJAdditions.m"; sourceTree = "<group>"; };
+		641076B0D4287EF2A4FE5056FAA239CB /* UIViewMRJFrame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIViewMRJFrame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B0D923ECB82637A88EC0F78388AF55 /* UIViewMRJFrame.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIViewMRJFrame.xcconfig; sourceTree = "<group>"; };
+		6AD0DB7B4077A0ABA969724591381A9F /* MRJDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7851AAEF834369010DF95A6D3DBA408E /* Pods-MRJDatePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJDatePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		85C228E522A02F1685E47746ACD5015D /* MRJDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MRJDatePicker.modulemap; sourceTree = "<group>"; };
+		86FEFA787BCEBD3F13317AF5B66E4179 /* MRJDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJDatePicker-umbrella.h"; sourceTree = "<group>"; };
+		8B4C6DAA004FF4C9B927AB3DDB60361F /* Pods-MRJDatePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJDatePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		9178BF893035922C53A65B2254413582 /* Macro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Macro.h; path = MRJTool/Classes/Marco/Macro.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		947164E8D71A6E1DF5E1F2EEB2773874 /* MRJUIColorAdditions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJUIColorAdditions-prefix.pch"; sourceTree = "<group>"; };
+		974EEC05FD289A6109AD78B489D5166F /* MRJUIColorAdditions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJUIColorAdditions.xcconfig; sourceTree = "<group>"; };
+		97825A11B3646618E1F0517BD7AB6814 /* MRJUIColorAdditions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJUIColorAdditions-umbrella.h"; sourceTree = "<group>"; };
+		9D0B1F6539A301F930B66D8E76DCD6B6 /* UIViewMRJFrame-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewMRJFrame-umbrella.h"; sourceTree = "<group>"; };
+		A2D1265256951F8F9C56447BD00F9D8A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51C9150986B6676420C219B94847A5A /* Pods-MRJDatePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MRJDatePicker_Tests.modulemap"; sourceTree = "<group>"; };
+		AC5387F2DE60D382F181EC28999769BA /* ClassMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClassMacro.h; path = MRJTool/Classes/Marco/ClassMacro.h; sourceTree = "<group>"; };
+		BE17CFCBDBAD386D61479402232B64D4 /* ScreenMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ScreenMacro.h; path = MRJTool/Classes/Marco/ScreenMacro.h; sourceTree = "<group>"; };
+		BFC62F77389F1B26E4FDC7C9CB533CFD /* MRJDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJDatePicker-prefix.pch"; sourceTree = "<group>"; };
+		C145C436AA6A0A3AAEF2F277986F6D4C /* Pods-MRJDatePicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRJDatePicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C15BE7DBFD50B5F658A2210261E1C91F /* MRJDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJDatePicker-dummy.m"; sourceTree = "<group>"; };
+		C1B506A41A9FD28F4A352189D2FFE04C /* Pods-MRJDatePicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRJDatePicker_Tests-dummy.m"; sourceTree = "<group>"; };
+		D1790F720A8E600684887839463AC504 /* MRJUIColorAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJUIColorAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2575AB2B63A15E135D01AAAFFE511E6 /* UIView+MRJFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MRJFrame.h"; path = "UIViewMRJFrame/Classes/UIView+MRJFrame.h"; sourceTree = "<group>"; };
+		D3740DF8E6E1ED99C3CCE9255A998D81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DE2AFBECAE2ED4E9B057E1F5BE75A143 /* MRJUIColorAdditions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MRJUIColorAdditions.modulemap; sourceTree = "<group>"; };
+		E718203E20A94153000937D4 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "MRJDatePicker/Classes/NSDate+Helper.h"; sourceTree = "<group>"; };
+		E718203F20A94153000937D4 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "MRJDatePicker/Classes/NSDate+Helper.m"; sourceTree = "<group>"; };
+		EBB62EDE3AE5C75CF6D0DD559C081004 /* NSDate+MRJDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MRJDatePicker.h"; path = "MRJDatePicker/Classes/NSDate+MRJDatePicker.h"; sourceTree = "<group>"; };
+		F121A64B8E34CD85BF114CDE1C441310 /* Pods-MRJDatePicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJDatePicker_Tests-resources.sh"; sourceTree = "<group>"; };
+		F1AD2C417FC6BF9E84B66F57A0422297 /* PropetyMarco.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PropetyMarco.h; path = MRJTool/Classes/Marco/PropetyMarco.h; sourceTree = "<group>"; };
+		F5C4A7390735F4D3CCFF542D328F8F74 /* IosVerionMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IosVerionMacro.h; path = MRJTool/Classes/Marco/IosVerionMacro.h; sourceTree = "<group>"; };
+		F60D06E128BFAEDC6F59F7A3DFC0B385 /* UIViewMRJFrame-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewMRJFrame-prefix.pch"; sourceTree = "<group>"; };
+		FDC4073A66BFBDB93E14F5A4B7C9542D /* ColorMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ColorMacro.h; path = MRJTool/Classes/Marco/ColorMacro.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2741007D545307B625BD56C2DA24AD1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E952BC28F89123AC1DE9A110F85FF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00C8FAD7EF8A19261CDB128A1051374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4BF9D95690833E4D1206715A401720 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57D20E02D4F47B7E8D30D08A6205B93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CF430D60AB4880F797D7A5F7AF030BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFEC43FF39DEB075F4327083BBC4879A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCC7B5CDA22A9B6AC67C61DAA8C2159 /* Foundation.framework in Frameworks */,
+				3B04F122807265953B6EDA373ACABFC4 /* MRJUIColorAdditions.framework in Frameworks */,
+				ED5BE74097EBC288FCCEB5948FA8E71A /* UIViewMRJFrame.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		004A422CE5AF9639DA1BD424C60202F9 /* UIViewMRJFrame */ = {
+			isa = PBXGroup;
+			children = (
+				D2575AB2B63A15E135D01AAAFFE511E6 /* UIView+MRJFrame.h */,
+				071B0AC6CB0FB80B127E724871D693B3 /* UIView+MRJFrame.m */,
+				587684736C493397E285D73F00BC5CCF /* Support Files */,
+			);
+			path = UIViewMRJFrame;
+			sourceTree = "<group>";
+		};
+		3FD2429FD4233E5C8FE7D8CC9955A023 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0DB7B4077A0ABA969724591381A9F /* MRJDatePicker.framework */,
+				D1790F720A8E600684887839463AC504 /* MRJUIColorAdditions.framework */,
+				08DFD791A406C49DCC038BB0E75AB771 /* Pods_MRJDatePicker_Tests.framework */,
+				641076B0D4287EF2A4FE5056FAA239CB /* UIViewMRJFrame.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		570A6D101365DCEDACBBC183E8EFBE21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FB30B26B8A8177F8C7EEAC172C1E01B /* MRJTool */,
+				B91532BC97B9727E4CEB01F727BD2598 /* MRJUIColorAdditions */,
+				004A422CE5AF9639DA1BD424C60202F9 /* UIViewMRJFrame */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		587684736C493397E285D73F00BC5CCF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				42EDF98A7A9F176CC24B313A4086929A /* Info.plist */,
+				2407B9E78894BE4867265768C3526F88 /* UIViewMRJFrame.modulemap */,
+				68B0D923ECB82637A88EC0F78388AF55 /* UIViewMRJFrame.xcconfig */,
+				0F7DD6E711A70664DCD945A16CB2CD82 /* UIViewMRJFrame-dummy.m */,
+				F60D06E128BFAEDC6F59F7A3DFC0B385 /* UIViewMRJFrame-prefix.pch */,
+				9D0B1F6539A301F930B66D8E76DCD6B6 /* UIViewMRJFrame-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIViewMRJFrame";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				E24B4A3DBD6D7EDDF1C46BBCD60FA2DD /* Development Pods */,
+				AAE9BF828B3C898AF8B80434ECE7028E /* Frameworks */,
+				570A6D101365DCEDACBBC183E8EFBE21 /* Pods */,
+				3FD2429FD4233E5C8FE7D8CC9955A023 /* Products */,
+				EE3E3817ED16AEC827E7C1EAD0C1BFA0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7FB30B26B8A8177F8C7EEAC172C1E01B /* MRJTool */ = {
+			isa = PBXGroup;
+			children = (
+				AC5387F2DE60D382F181EC28999769BA /* ClassMacro.h */,
+				FDC4073A66BFBDB93E14F5A4B7C9542D /* ColorMacro.h */,
+				F5C4A7390735F4D3CCFF542D328F8F74 /* IosVerionMacro.h */,
+				9178BF893035922C53A65B2254413582 /* Macro.h */,
+				F1AD2C417FC6BF9E84B66F57A0422297 /* PropetyMarco.h */,
+				BE17CFCBDBAD386D61479402232B64D4 /* ScreenMacro.h */,
+				214ADF21255DB7BC32895793695192EF /* StringMacro.h */,
+			);
+			path = MRJTool;
+			sourceTree = "<group>";
+		};
+		86A377B3AA21076C672409F2D7E1571A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D3740DF8E6E1ED99C3CCE9255A998D81 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8CFF8DFF08106194672837AF0E7F3888 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2D1265256951F8F9C56447BD00F9D8A /* Info.plist */,
+				85C228E522A02F1685E47746ACD5015D /* MRJDatePicker.modulemap */,
+				0307735D0D53976B11948959ED5CB6CF /* MRJDatePicker.xcconfig */,
+				C15BE7DBFD50B5F658A2210261E1C91F /* MRJDatePicker-dummy.m */,
+				BFC62F77389F1B26E4FDC7C9CB533CFD /* MRJDatePicker-prefix.pch */,
+				86FEFA787BCEBD3F13317AF5B66E4179 /* MRJDatePicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MRJDatePicker";
+			sourceTree = "<group>";
+		};
+		9582645B734B41EF0DD2AC2CA530DFD0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				1F83617A5D0EB3D969504D655FE9CE3D /* LICENSE */,
+				1EF604BD3818726B3AB09209F36BFDD9 /* MRJDatePicker.podspec */,
+				580FA1A9F2580B8F9F278C8FCDAA0476 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		AAE9BF828B3C898AF8B80434ECE7028E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54A872984BADD6F4134C1874D0F3082E /* MRJUIColorAdditions.framework */,
+				0E302BA554D77A0B35C3A84691673158 /* UIViewMRJFrame.framework */,
+				86A377B3AA21076C672409F2D7E1571A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD7A75F2DBA1AAEAA549F480FDBA09A6 /* MRJDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E718203E20A94153000937D4 /* NSDate+Helper.h */,
+				E718203F20A94153000937D4 /* NSDate+Helper.m */,
+				1C2184C2E45EAFF42CFCE88323433987 /* MRJDatePicker.h */,
+				5ED4EA046E0CDE4BBE550C383C34E6AF /* MRJDatePicker.m */,
+				EBB62EDE3AE5C75CF6D0DD559C081004 /* NSDate+MRJDatePicker.h */,
+				43BCC1391414B5D267F8AC7A86A7EEA8 /* NSDate+MRJDatePicker.m */,
+				9582645B734B41EF0DD2AC2CA530DFD0 /* Pod */,
+				8CFF8DFF08106194672837AF0E7F3888 /* Support Files */,
+			);
+			name = MRJDatePicker;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		AE9B196576084B2FDB9B739DD7BDFEB0 /* Pods-MRJDatePicker_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3E14D7B04CC4BFA1E17E1E018D9FCCD9 /* Info.plist */,
+				A51C9150986B6676420C219B94847A5A /* Pods-MRJDatePicker_Tests.modulemap */,
+				C145C436AA6A0A3AAEF2F277986F6D4C /* Pods-MRJDatePicker_Tests-acknowledgements.markdown */,
+				4A98BBA4D3B6AB1EFF2CD0CBB3BB9C16 /* Pods-MRJDatePicker_Tests-acknowledgements.plist */,
+				C1B506A41A9FD28F4A352189D2FFE04C /* Pods-MRJDatePicker_Tests-dummy.m */,
+				8B4C6DAA004FF4C9B927AB3DDB60361F /* Pods-MRJDatePicker_Tests-frameworks.sh */,
+				F121A64B8E34CD85BF114CDE1C441310 /* Pods-MRJDatePicker_Tests-resources.sh */,
+				570C8F1D1493F9CF640BC48F9141A4C7 /* Pods-MRJDatePicker_Tests-umbrella.h */,
+				7851AAEF834369010DF95A6D3DBA408E /* Pods-MRJDatePicker_Tests.debug.xcconfig */,
+				5C684A93CAD886FA69293172AF9B7377 /* Pods-MRJDatePicker_Tests.release.xcconfig */,
+			);
+			name = "Pods-MRJDatePicker_Tests";
+			path = "Target Support Files/Pods-MRJDatePicker_Tests";
+			sourceTree = "<group>";
+		};
+		B91532BC97B9727E4CEB01F727BD2598 /* MRJUIColorAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				225643BB20DD3446DDBB92DB2CB35052 /* UIColor+MRJAdditions.h */,
+				6084708E4EAAD747D38E3FC443FC3397 /* UIColor+MRJAdditions.m */,
+				D834E228F6512D0664DE59556A3B2D78 /* Support Files */,
+			);
+			path = MRJUIColorAdditions;
+			sourceTree = "<group>";
+		};
+		D834E228F6512D0664DE59556A3B2D78 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3215D2844709BDDDB3CEC30D05AA270B /* Info.plist */,
+				DE2AFBECAE2ED4E9B057E1F5BE75A143 /* MRJUIColorAdditions.modulemap */,
+				974EEC05FD289A6109AD78B489D5166F /* MRJUIColorAdditions.xcconfig */,
+				60563BBB582889537D061ED514E0FED1 /* MRJUIColorAdditions-dummy.m */,
+				947164E8D71A6E1DF5E1F2EEB2773874 /* MRJUIColorAdditions-prefix.pch */,
+				97825A11B3646618E1F0517BD7AB6814 /* MRJUIColorAdditions-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MRJUIColorAdditions";
+			sourceTree = "<group>";
+		};
+		E24B4A3DBD6D7EDDF1C46BBCD60FA2DD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A75F2DBA1AAEAA549F480FDBA09A6 /* MRJDatePicker */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		EE3E3817ED16AEC827E7C1EAD0C1BFA0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE9B196576084B2FDB9B739DD7BDFEB0 /* Pods-MRJDatePicker_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7E34037B00F5AC941DD51B8A6021D914 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D067E1528BDD7D12A332027902B76A7 /* Pods-MRJDatePicker_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A80A4CBB93457798C1A37834ADA9D258 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F79C32CF6C1DCD4D48649B6EACDDF80 /* MRJDatePicker-umbrella.h in Headers */,
+				C3033CABC5E777A78B71158C10EB7565 /* MRJDatePicker.h in Headers */,
+				1F2E1605D2DF133B3D224FBFB49ED117 /* NSDate+MRJDatePicker.h in Headers */,
+				E718204020A94153000937D4 /* NSDate+Helper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58B9DF7FD987F877DAE17A132B0CFBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF8022A61D42DA6DE589CC010ACD583 /* MRJUIColorAdditions-umbrella.h in Headers */,
+				0E875CA8DB1B6716D6B6D86CED2033AB /* UIColor+MRJAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7557D4AA55A9C47F7B97FEB3B0924AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F463A88FBE75CE5BA314A2046D044D /* UIView+MRJFrame.h in Headers */,
+				3B1293BB60E662048CEBE8CEF75DD6FD /* UIViewMRJFrame-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		263DB5C89D5F6E98B86F0A9BD4F4AA5B /* Pods-MRJDatePicker_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6931728EF6416AFBCEEEE62C77A36025 /* Build configuration list for PBXNativeTarget "Pods-MRJDatePicker_Tests" */;
+			buildPhases = (
+				94B5DE6482F03D80765CAF2FC382C988 /* Sources */,
+				D57D20E02D4F47B7E8D30D08A6205B93 /* Frameworks */,
+				7E34037B00F5AC941DD51B8A6021D914 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D41254CA151CE00F10FF6D3FFC821F9B /* PBXTargetDependency */,
+				F522010C8ED00AC6E904F0FDA9FD8897 /* PBXTargetDependency */,
+				AF2F19A7755E887BB1FA1D49EBE4609C /* PBXTargetDependency */,
+			);
+			name = "Pods-MRJDatePicker_Tests";
+			productName = "Pods-MRJDatePicker_Tests";
+			productReference = 08DFD791A406C49DCC038BB0E75AB771 /* Pods_MRJDatePicker_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5977570B9F6E9EF7FE716797231333C9 /* MRJUIColorAdditions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47A3757F66C86B886531826DD19C3545 /* Build configuration list for PBXNativeTarget "MRJUIColorAdditions" */;
+			buildPhases = (
+				294CEF2DF20C12F87AFB84F1834AD684 /* Sources */,
+				2741007D545307B625BD56C2DA24AD1A /* Frameworks */,
+				D58B9DF7FD987F877DAE17A132B0CFBA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRJUIColorAdditions;
+			productName = MRJUIColorAdditions;
+			productReference = D1790F720A8E600684887839463AC504 /* MRJUIColorAdditions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9D871B6FAD5DF161520F7A9F4E31E173 /* MRJDatePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7689AA2168C156D453A5E46D2B88F9 /* Build configuration list for PBXNativeTarget "MRJDatePicker" */;
+			buildPhases = (
+				B4EC58C6077F62DD4F752BD47448FC29 /* Sources */,
+				DFEC43FF39DEB075F4327083BBC4879A /* Frameworks */,
+				A80A4CBB93457798C1A37834ADA9D258 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E312467D2E538F77218BB70AD44B616A /* PBXTargetDependency */,
+				32190D033A2F23CC0296504B0A99D31C /* PBXTargetDependency */,
+			);
+			name = MRJDatePicker;
+			productName = MRJDatePicker;
+			productReference = 6AD0DB7B4077A0ABA969724591381A9F /* MRJDatePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CCCEB15A21FDDB862E12A7E16275B128 /* UIViewMRJFrame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6EEB49998F78F240D275C5087AC4485 /* Build configuration list for PBXNativeTarget "UIViewMRJFrame" */;
+			buildPhases = (
+				C7678DEB09C6C70FE7834FB246D57C7E /* Sources */,
+				D00C8FAD7EF8A19261CDB128A1051374 /* Frameworks */,
+				F7557D4AA55A9C47F7B97FEB3B0924AA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIViewMRJFrame;
+			productName = UIViewMRJFrame;
+			productReference = 641076B0D4287EF2A4FE5056FAA239CB /* UIViewMRJFrame.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 3FD2429FD4233E5C8FE7D8CC9955A023 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D871B6FAD5DF161520F7A9F4E31E173 /* MRJDatePicker */,
+				5977570B9F6E9EF7FE716797231333C9 /* MRJUIColorAdditions */,
+				263DB5C89D5F6E98B86F0A9BD4F4AA5B /* Pods-MRJDatePicker_Tests */,
+				CCCEB15A21FDDB862E12A7E16275B128 /* UIViewMRJFrame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		294CEF2DF20C12F87AFB84F1834AD684 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FDEB097E481EEE16D71C73D578985B9 /* MRJUIColorAdditions-dummy.m in Sources */,
+				123D07113ADDD8F2AC36256B803835BB /* UIColor+MRJAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B5DE6482F03D80765CAF2FC382C988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18D64B70F5BBCFC258D2AEB7C90D2E9 /* Pods-MRJDatePicker_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4EC58C6077F62DD4F752BD47448FC29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E718204120A94153000937D4 /* NSDate+Helper.m in Sources */,
+				88D36D6084CEAD1E796C3DF9A83EFB04 /* MRJDatePicker-dummy.m in Sources */,
+				5DF08D818694D9A289C1B40585665246 /* MRJDatePicker.m in Sources */,
+				01753ABA4CF6FEB14D5E3A93A2BC1501 /* NSDate+MRJDatePicker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7678DEB09C6C70FE7834FB246D57C7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED6B133237719896737B2D7B2ADFCDF /* UIView+MRJFrame.m in Sources */,
+				659AD5AE1C7657B1C4AE2F9B7DE71C70 /* UIViewMRJFrame-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32190D033A2F23CC0296504B0A99D31C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIViewMRJFrame;
+			target = CCCEB15A21FDDB862E12A7E16275B128 /* UIViewMRJFrame */;
+			targetProxy = 8B99DECEEA73C1183978AC02CFF0F597 /* PBXContainerItemProxy */;
+		};
+		AF2F19A7755E887BB1FA1D49EBE4609C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIViewMRJFrame;
+			target = CCCEB15A21FDDB862E12A7E16275B128 /* UIViewMRJFrame */;
+			targetProxy = C887C96B08DC59275F651F816BB3611C /* PBXContainerItemProxy */;
+		};
+		D41254CA151CE00F10FF6D3FFC821F9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRJDatePicker;
+			target = 9D871B6FAD5DF161520F7A9F4E31E173 /* MRJDatePicker */;
+			targetProxy = 64BA24FE813A316893AE56428E24D46D /* PBXContainerItemProxy */;
+		};
+		E312467D2E538F77218BB70AD44B616A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRJUIColorAdditions;
+			target = 5977570B9F6E9EF7FE716797231333C9 /* MRJUIColorAdditions */;
+			targetProxy = B93CD7B6D984A21A22DC55E2E0C27AD5 /* PBXContainerItemProxy */;
+		};
+		F522010C8ED00AC6E904F0FDA9FD8897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRJUIColorAdditions;
+			target = 5977570B9F6E9EF7FE716797231333C9 /* MRJUIColorAdditions */;
+			targetProxy = 41360940758F087EC649B44A79183208 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01DB032564C933ED06F0A89998CC1CBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B0D923ECB82637A88EC0F78388AF55 /* UIViewMRJFrame.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIViewMRJFrame/UIViewMRJFrame-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIViewMRJFrame/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIViewMRJFrame/UIViewMRJFrame.modulemap";
+				PRODUCT_MODULE_NAME = UIViewMRJFrame;
+				PRODUCT_NAME = UIViewMRJFrame;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2B2DCE880ED7CD474CDEE6119109D7F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0307735D0D53976B11948959ED5CB6CF /* MRJDatePicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRJDatePicker/MRJDatePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRJDatePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRJDatePicker/MRJDatePicker.modulemap";
+				PRODUCT_MODULE_NAME = MRJDatePicker;
+				PRODUCT_NAME = MRJDatePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39DC1B146EEF9B88B1D4F37590D8607E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7851AAEF834369010DF95A6D3DBA408E /* Pods-MRJDatePicker_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRJDatePicker_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MRJDatePicker_Tests/Pods-MRJDatePicker_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		77DEB91F3D8CF59FDEA3C72367211CE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974EEC05FD289A6109AD78B489D5166F /* MRJUIColorAdditions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRJUIColorAdditions/MRJUIColorAdditions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRJUIColorAdditions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRJUIColorAdditions/MRJUIColorAdditions.modulemap";
+				PRODUCT_MODULE_NAME = MRJUIColorAdditions;
+				PRODUCT_NAME = MRJUIColorAdditions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B84E8D50F90901CE68C97A565CFE0EB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0307735D0D53976B11948959ED5CB6CF /* MRJDatePicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRJDatePicker/MRJDatePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRJDatePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRJDatePicker/MRJDatePicker.modulemap";
+				PRODUCT_MODULE_NAME = MRJDatePicker;
+				PRODUCT_NAME = MRJDatePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BFA505A72B53785C7C1180D7E5E489FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C684A93CAD886FA69293172AF9B7377 /* Pods-MRJDatePicker_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRJDatePicker_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MRJDatePicker_Tests/Pods-MRJDatePicker_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D4DF8BAC30B83F49F2F6268E20A1CBE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974EEC05FD289A6109AD78B489D5166F /* MRJUIColorAdditions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRJUIColorAdditions/MRJUIColorAdditions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRJUIColorAdditions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRJUIColorAdditions/MRJUIColorAdditions.modulemap";
+				PRODUCT_MODULE_NAME = MRJUIColorAdditions;
+				PRODUCT_NAME = MRJUIColorAdditions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EEAF04132AD4F749D2FD9CC45ACE3F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B0D923ECB82637A88EC0F78388AF55 /* UIViewMRJFrame.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIViewMRJFrame/UIViewMRJFrame-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIViewMRJFrame/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIViewMRJFrame/UIViewMRJFrame.modulemap";
+				PRODUCT_MODULE_NAME = UIViewMRJFrame;
+				PRODUCT_NAME = UIViewMRJFrame;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
+				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47A3757F66C86B886531826DD19C3545 /* Build configuration list for PBXNativeTarget "MRJUIColorAdditions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DEB91F3D8CF59FDEA3C72367211CE9 /* Debug */,
+				D4DF8BAC30B83F49F2F6268E20A1CBE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6931728EF6416AFBCEEEE62C77A36025 /* Build configuration list for PBXNativeTarget "Pods-MRJDatePicker_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39DC1B146EEF9B88B1D4F37590D8607E /* Debug */,
+				BFA505A72B53785C7C1180D7E5E489FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6EEB49998F78F240D275C5087AC4485 /* Build configuration list for PBXNativeTarget "UIViewMRJFrame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01DB032564C933ED06F0A89998CC1CBB /* Debug */,
+				EEAF04132AD4F749D2FD9CC45ACE3F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD7689AA2168C156D453A5E46D2B88F9 /* Build configuration list for PBXNativeTarget "MRJDatePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B2DCE880ED7CD474CDEE6119109D7F4 /* Debug */,
+				B84E8D50F90901CE68C97A565CFE0EB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
