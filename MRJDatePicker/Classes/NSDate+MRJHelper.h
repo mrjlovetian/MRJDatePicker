@@ -1,5 +1,5 @@
 //
-// NSDate+Helper.h
+// NSDate+MRJHelper.h
 //
 // Created by Billy Gray on 2/26/09.
 // Copyright (c) 2009, 2010, ZETETIC LLC
@@ -30,7 +30,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (Helper)
+@interface NSDate (MRJHelper)
 
 - (NSUInteger)daysAgo;
 - (NSUInteger)daysAgoAgainstMidnight;

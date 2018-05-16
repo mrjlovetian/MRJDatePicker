@@ -7,7 +7,7 @@
 //
 
 #import "MRJDatePicker.h"
-#import "NSDate+Helper.h"
+#import "NSDate+MRJHelper.h"
 #import "UIColor+MRJAdditions.h"
 
 // Constants :
@@ -112,8 +112,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 #pragma mark - Initializers
 
 - (instancetype)initWithSuperView:(UIView*)superView {
-    
-    
     if (self = [super initWithFrame:CGRectMake(0.0, superView.frame.size.height, superView.frame.size.width, kMRJDatePickerHeight)]) {
         _datePickerMode = MRJDatePickerModeDate;
         [superView addSubview:self];
@@ -213,7 +211,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     if (self.datePickerMode == MRJDatePickerModeYearAndMonth) {
         [self buildSelectorYearsOffsetX:0.0 andWidth:self.frame.size.width * 0.5];
         [self buildSelectorMonthsOffsetX:(_scrollViewYears.frame.size.width + kMRJDatePickerScrollViewLeftMargin) andWidth:self.frame.size.width * 0.5];
-        
     }
     
     // Defaut Date selected :
@@ -233,15 +230,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _scrollViewDays.showsHorizontalScrollIndicator = NO;
     _scrollViewDays.showsVerticalScrollIndicator = NO;
     [self addSubview:_scrollViewDays];
-    
-//    _lineDaysTop = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewDays.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewDays.frame.origin.y + (_scrollViewDays.frame.size.height / 2) - (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineDaysTop.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineDaysTop];
-//    
-//    _lineDaysBottom = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewDays.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewDays.frame.origin.y + (_scrollViewDays.frame.size.height / 2) + (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineDaysBottom.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineDaysBottom];
-    
+ 
     // Update ScrollView Data
     [self buildSelectorLabelsDays];
     
@@ -264,16 +253,13 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _labelsDays = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < _days.count; i++) {
-        
-        NSString *day = (NSString*)[_days objectAtIndex:i];
-        
+        NSString *day = (NSString *)[_days objectAtIndex:i];
         UILabel *labelDay = [[UILabel alloc] initWithFrame:CGRectMake(0, (i * kMRJDatePickerScrollViewItemHeight) + offsetContentScrollView, _scrollViewDays.frame.size.width, kMRJDatePickerScrollViewItemHeight)];
         labelDay.text = day;
         labelDay.font = kMRJDatePickerLabelFont;
         labelDay.textAlignment = NSTextAlignmentCenter;
         labelDay.textColor = self.tintColor;
         labelDay.backgroundColor = [UIColor clearColor];
-        
         [_labelsDays addObject:labelDay];
         [_scrollViewDays addSubview:labelDay];
     }
@@ -302,7 +288,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 - (void)buildSelectorMonthsOffsetX:(CGFloat)x andWidth:(CGFloat)width {
     
     // ScrollView Months
-    
     _scrollViewMonths = [[UIScrollView alloc] initWithFrame:CGRectMake(x, kMRJDatePickerHeaderHeight + kMRJDatePickerHeaderBottomMargin, width, self.frame.size.height - kMRJDatePickerHeaderHeight - kMRJDatePickerHeaderBottomMargin)];
     _scrollViewMonths.tag = ScrollViewTagValue_MONTHS;
     _scrollViewMonths.delegate = self;
@@ -310,16 +295,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _scrollViewMonths.showsHorizontalScrollIndicator = NO;
     _scrollViewMonths.showsVerticalScrollIndicator = NO;
     [self addSubview:_scrollViewMonths];
-    
-//    _lineMonthsTop = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewMonths.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewMonths.frame.origin.y + (_scrollViewMonths.frame.size.height / 2) - (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineMonthsTop.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineMonthsTop];
-//    
-//    _lineMonthsBottom = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewMonths.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewMonths.frame.origin.y + (_scrollViewMonths.frame.size.height / 2) + (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineMonthsBottom.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineMonthsBottom];
-    
-    
+
     // Update ScrollView Data
     [self buildSelectorLabelsMonths];
     
@@ -389,14 +365,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _scrollViewYears.showsVerticalScrollIndicator = NO;
     [self addSubview:_scrollViewYears];
     
-//    _lineYearsTop = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewYears.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewYears.frame.origin.y + (_scrollViewYears.frame.size.height / 2) - (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineYearsTop.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineYearsTop];
-//    
-//    _lineYearsBottom = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewYears.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewYears.frame.origin.y + (_scrollViewYears.frame.size.height / 2) + (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineYearsBottom.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineYearsBottom];
-    
     // Update ScrollView Data
     [self buildSelectorLabelsYears];
     
@@ -465,14 +433,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _scrollViewDates.showsVerticalScrollIndicator = NO;
     [self addSubview:_scrollViewDates];
     
-//    _lineDatesTop = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewDates.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewDates.frame.origin.y + (_scrollViewDates.frame.size.height / 2) - (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineDatesTop.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineDatesTop];
-//    
-//    _lineDatesBottom = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewDates.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewDates.frame.origin.y + (_scrollViewDates.frame.size.height / 2) + (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineDatesBottom.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineDatesBottom];
-    
     // Update ScrollView Data
     [self buildSelectorLabelsDates];
     
@@ -485,7 +445,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 - (void)buildSelectorLabelsDates {
     
     CGFloat offsetContentScrollView = (_scrollViewDates.frame.size.height - kMRJDatePickerScrollViewItemHeight) / 2.0;
-    
     if (_labelsDates && _labelsDates.count > 0) {
         for (UILabel *label in _labelsDates) {
             [label removeFromSuperview];
@@ -502,9 +461,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     for (int i = 0; i < _dates.count; i++) {
         
         NSDate *date = [_dates objectAtIndex:i];
-        
         NSString *hour = [dateFormatter stringFromDate:date];
-        
         UILabel *labelDate = [[UILabel alloc] initWithFrame:CGRectMake(0, (i * kMRJDatePickerScrollViewItemHeight) + offsetContentScrollView, _scrollViewDates.frame.size.width, kMRJDatePickerScrollViewItemHeight)];
         labelDate.text = hour;
         labelDate.font = kMRJDatePickerLabelFont;
@@ -547,14 +504,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _scrollViewHours.showsHorizontalScrollIndicator = NO;
     _scrollViewHours.showsVerticalScrollIndicator = NO;
     [self addSubview:_scrollViewHours];
-    
-//    _lineHoursTop = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewHours.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewHours.frame.origin.y + (_scrollViewHours.frame.size.height / 2) - (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineHoursTop.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineHoursTop];
-//    
-//    _lineHoursBottom = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewHours.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewHours.frame.origin.y + (_scrollViewHours.frame.size.height / 2) + (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineHoursBottom.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineHoursBottom];
     
     // Update ScrollView Data
     [self buildSelectorLabelsHours];
@@ -623,15 +572,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _scrollViewMinutes.showsHorizontalScrollIndicator = NO;
     _scrollViewMinutes.showsVerticalScrollIndicator = NO;
     [self addSubview:_scrollViewMinutes];
-    
-//    _lineMinutesTop = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewMinutes.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewMinutes.frame.origin.y + (_scrollViewMinutes.frame.size.height / 2) - (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineMinutesTop.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineMinutesTop];
-//    
-//    _lineMinutesBottom = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewMinutes.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewMinutes.frame.origin.y + (_scrollViewMinutes.frame.size.height / 2) + (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineMinutesBottom.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineMinutesBottom];
-    
+ 
     // Update ScrollView Data
     [self buildSelectorLabelsMinutes];
     
@@ -700,14 +641,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _scrollViewSeconds.showsVerticalScrollIndicator = NO;
     [self addSubview:_scrollViewSeconds];
     
-//    _lineSecondsTop = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewSeconds.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewSeconds.frame.origin.y + (_scrollViewSeconds.frame.size.height / 2) - (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineSecondsTop.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineSecondsTop];
-//    
-//    _lineSecondsBottom = [[UIView alloc] initWithFrame:CGRectMake(_scrollViewSeconds.frame.origin.x + kMRJDatePickerLineMargin, _scrollViewSeconds.frame.origin.y + (_scrollViewSeconds.frame.size.height / 2) + (kMRJDatePickerScrollViewItemHeight / 2), width - (2 * kMRJDatePickerLineMargin), kMRJDatePickerLineWidth)];
-//    _lineSecondsBottom.backgroundColor = kLineBackColor;
-//    [self addSubview:_lineSecondsBottom];
-    
     // Update ScrollView Data
     [self buildSelectorLabelsSeconds];
     
@@ -730,7 +663,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _labelsSeconds = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < self.seconds.count; i++) {
-        
         NSString *second = (NSString*)[self.seconds objectAtIndex:i];
         
         UILabel *labelSecond = [[UILabel alloc] initWithFrame:CGRectMake(0, (i * kMRJDatePickerScrollViewItemHeight) + offsetContentScrollView, _scrollViewSeconds.frame.size.width, kMRJDatePickerScrollViewItemHeight)];
@@ -1358,15 +1290,12 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
         } else {
             [self setScrollView:_scrollViewDates atIndex:(_selectedDay - 1) animated:animated];
         }
-        
     }
     
     if (self.datePickerMode == MRJDatePickerModeDate) {
         [self setScrollView:_scrollViewYears atIndex:(_selectedYear - _minYear) animated:animated];
         [self setScrollView:_scrollViewMonths atIndex:(_selectedMonth - 1) animated:animated];
         [self setScrollView:_scrollViewDays atIndex:(_selectedDay - 1) animated:animated];
-        
-        
     }
     
     if (self.datePickerMode == MRJDatePickerModeTime || self.datePickerMode == MRJDatePickerModeDateAndTime) {
@@ -1565,7 +1494,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
         _headerView.backgroundColor = [UIColor colorWithHexString:@"efeff4"];
         
         // Button Cancel
-        
         UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 54.5, [UIScreen mainScreen].bounds.size.width, 0.5)];
         lineView.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"];
         [_headerView addSubview:lineView];
@@ -1598,8 +1526,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     return _headerView;
 }
 
--(void)setTitle:(NSString *)title
-{
+-(void)setTitle:(NSString *)title {
     _title = title;
     self.titleLabel.text = title;
 }

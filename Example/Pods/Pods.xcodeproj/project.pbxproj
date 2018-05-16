@@ -27,8 +27,8 @@
 		C4F463A88FBE75CE5BA314A2046D044D /* UIView+MRJFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = D2575AB2B63A15E135D01AAAFFE511E6 /* UIView+MRJFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF8022A61D42DA6DE589CC010ACD583 /* MRJUIColorAdditions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97825A11B3646618E1F0517BD7AB6814 /* MRJUIColorAdditions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DED6B133237719896737B2D7B2ADFCDF /* UIView+MRJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 071B0AC6CB0FB80B127E724871D693B3 /* UIView+MRJFrame.m */; };
-		E718204020A94153000937D4 /* NSDate+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = E718203E20A94153000937D4 /* NSDate+Helper.h */; };
-		E718204120A94153000937D4 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E718203F20A94153000937D4 /* NSDate+Helper.m */; };
+		E718204020A94153000937D4 /* NSDate+MRJHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E718203E20A94153000937D4 /* NSDate+MRJHelper.h */; };
+		E718204120A94153000937D4 /* NSDate+MRJHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E718203F20A94153000937D4 /* NSDate+MRJHelper.m */; };
 		ED5BE74097EBC288FCCEB5948FA8E71A /* UIViewMRJFrame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E302BA554D77A0B35C3A84691673158 /* UIViewMRJFrame.framework */; };
 		F18D64B70F5BBCFC258D2AEB7C90D2E9 /* Pods-MRJDatePicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B506A41A9FD28F4A352189D2FFE04C /* Pods-MRJDatePicker_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -120,8 +120,8 @@
 		D2575AB2B63A15E135D01AAAFFE511E6 /* UIView+MRJFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MRJFrame.h"; path = "UIViewMRJFrame/Classes/UIView+MRJFrame.h"; sourceTree = "<group>"; };
 		D3740DF8E6E1ED99C3CCE9255A998D81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DE2AFBECAE2ED4E9B057E1F5BE75A143 /* MRJUIColorAdditions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MRJUIColorAdditions.modulemap; sourceTree = "<group>"; };
-		E718203E20A94153000937D4 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "MRJDatePicker/Classes/NSDate+Helper.h"; sourceTree = "<group>"; };
-		E718203F20A94153000937D4 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "MRJDatePicker/Classes/NSDate+Helper.m"; sourceTree = "<group>"; };
+		E718203E20A94153000937D4 /* NSDate+MRJHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+MRJHelper.h"; path = "MRJDatePicker/Classes/NSDate+MRJHelper.h"; sourceTree = "<group>"; };
+		E718203F20A94153000937D4 /* NSDate+MRJHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MRJHelper.m"; path = "MRJDatePicker/Classes/NSDate+MRJHelper.m"; sourceTree = "<group>"; };
 		EBB62EDE3AE5C75CF6D0DD559C081004 /* NSDate+MRJDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MRJDatePicker.h"; path = "MRJDatePicker/Classes/NSDate+MRJDatePicker.h"; sourceTree = "<group>"; };
 		F121A64B8E34CD85BF114CDE1C441310 /* Pods-MRJDatePicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJDatePicker_Tests-resources.sh"; sourceTree = "<group>"; };
 		F1AD2C417FC6BF9E84B66F57A0422297 /* PropetyMarco.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PropetyMarco.h; path = MRJTool/Classes/Marco/PropetyMarco.h; sourceTree = "<group>"; };
@@ -284,8 +284,8 @@
 		AD7A75F2DBA1AAEAA549F480FDBA09A6 /* MRJDatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				E718203E20A94153000937D4 /* NSDate+Helper.h */,
-				E718203F20A94153000937D4 /* NSDate+Helper.m */,
+				E718203E20A94153000937D4 /* NSDate+MRJHelper.h */,
+				E718203F20A94153000937D4 /* NSDate+MRJHelper.m */,
 				1C2184C2E45EAFF42CFCE88323433987 /* MRJDatePicker.h */,
 				5ED4EA046E0CDE4BBE550C383C34E6AF /* MRJDatePicker.m */,
 				EBB62EDE3AE5C75CF6D0DD559C081004 /* NSDate+MRJDatePicker.h */,
@@ -373,7 +373,7 @@
 				4F79C32CF6C1DCD4D48649B6EACDDF80 /* MRJDatePicker-umbrella.h in Headers */,
 				C3033CABC5E777A78B71158C10EB7565 /* MRJDatePicker.h in Headers */,
 				1F2E1605D2DF133B3D224FBFB49ED117 /* NSDate+MRJDatePicker.h in Headers */,
-				E718204020A94153000937D4 /* NSDate+Helper.h in Headers */,
+				E718204020A94153000937D4 /* NSDate+MRJHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E718204120A94153000937D4 /* NSDate+Helper.m in Sources */,
+				E718204120A94153000937D4 /* NSDate+MRJHelper.m in Sources */,
 				88D36D6084CEAD1E796C3DF9A83EFB04 /* MRJDatePicker-dummy.m in Sources */,
 				5DF08D818694D9A289C1B40585665246 /* MRJDatePicker.m in Sources */,
 				01753ABA4CF6FEB14D5E3A93A2BC1501 /* NSDate+MRJDatePicker.m in Sources */,

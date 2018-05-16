@@ -1,5 +1,5 @@
 //
-// NSDate+Helper.h
+// NSDate+MRJHelper.h
 //
 // Created by Billy Gray on 2/26/09.
 // Copyright (c) 2009, 2010, ZETETIC LLC
@@ -28,12 +28,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "NSDate+Helper.h"
+#import "NSDate+MRJHelper.h"
 
 static NSCalendar *calendar;
 static NSDateFormatter *displayFormatter;
 
-@implementation NSDate (Helper)
+@implementation NSDate (MRJHelper)
 
 + (void)load { 
     calendar =  [NSCalendar currentCalendar] ;
