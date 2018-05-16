@@ -11,7 +11,6 @@
 NSString * const kDateFormatYYYYMMDD = @"yyyy-MM-dd";
 NSString * const kDateFormatYYMMDDTHHmmss = @"yyyy-MM-dd'T'HH:mm:ss";
 
-
 @implementation NSDate (MRJDatePicker)
 
 + (NSDateFormatter *)shareDateFormatter {

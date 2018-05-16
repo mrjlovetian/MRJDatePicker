@@ -10,10 +10,6 @@
 #import "NSDate+MRJHelper.h"
 #import "UIColor+MRJAdditions.h"
 
-// Constants :
-//static NSString  * const kSureButtonItemTitle = @"OK".local_basic;
-//static NSString  * const kCancelButtonItemTitle = @"取消";
-
 // Constants sizes :
 static CGFloat const kMRJDatePickerHeight = 250.0f;
 
@@ -878,43 +874,31 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
             timestampMin += 1 * 24 * 60 * 60;
         }
     }
-    
     return dates;
 }
 
-- (NSMutableArray*)getDaysInMonth:(NSDate*)date {
-    
+- (NSMutableArray *)getDaysInMonth:(NSDate *)date {
     if (date == nil) date = [NSDate date];
-    
     NSRange daysRange = [self.calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date];
-    
     NSMutableArray *days = [[NSMutableArray alloc] init];
-    
     for (int i = 1; i <= daysRange.length; i++) {
-        
         [days addObject:[NSString stringWithFormat:@"%d%@", i, @"日"]];
     }
-    
     return days;
 }
 
 #pragma mark - UIScrollView Delegate
 
 - (void)singleTapGestureDaysCaptured:(UITapGestureRecognizer *)gesture {
-    
     CGPoint touchPoint = [gesture locationInView:self];
     CGFloat touchY = touchPoint.y;
-    
     if (touchY < (_lineDaysTop.frame.origin.y)) {
-        
         if (_selectedDay > 1) {
             _selectedDay -= 1;
             [self setScrollView:_scrollViewDays atIndex:(_selectedDay - 1) animated:YES];
             [self checkSelectDate];
         }
-        
     } else if (touchY > (_lineDaysBottom.frame.origin.y)) {
-        
         if (_selectedDay < _days.count) {
             _selectedDay += 1;
             [self setScrollView:_scrollViewDays atIndex:(_selectedDay - 1) animated:YES];
@@ -924,12 +908,9 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 }
 
 - (void)singleTapGestureMonthsCaptured:(UITapGestureRecognizer *)gesture {
-    
     CGPoint touchPoint = [gesture locationInView:self];
     CGFloat touchY = touchPoint.y;
-    
     if (touchY < (_lineMonthsTop.frame.origin.y)) {
-        
         if (_selectedMonth > 1) {
             _selectedMonth -= 1;
             [self setScrollView:_scrollViewMonths atIndex:(_selectedMonth - 1) animated:YES];
@@ -947,23 +928,16 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 }
 
 - (void)singleTapGestureYearsCaptured:(UITapGestureRecognizer *)gesture {
-    
     CGPoint touchPoint = [gesture locationInView:self];
     CGFloat touchY = touchPoint.y;
-    
     NSInteger minYear = _minYear;
-    
     if (touchY < (_lineYearsTop.frame.origin.y)) {
-        
         if (_selectedYear > minYear) {
             _selectedYear -= 1;
             [self setScrollView:_scrollViewYears atIndex:(_selectedYear - minYear) animated:YES];
             [self checkSelectDate];
-
         }
-        
     } else if (touchY > (_lineYearsBottom.frame.origin.y)) {
-        
         if (_selectedYear < (_years.count + (minYear - 1))) {
             _selectedYear += 1;
             [self setScrollView:_scrollViewYears atIndex:(_selectedYear - minYear) animated:YES];
@@ -972,53 +946,40 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     }
 }
 
-
 - (void)singleTapGestureDatesCaptured:(UITapGestureRecognizer *)gesture {
     
     CGPoint touchPoint = [gesture locationInView:self];
     CGFloat touchY = touchPoint.y;
-    
     if (touchY < (_lineDatesTop.frame.origin.y)) {
-        
         if (_selectedDate > 0) {
             _selectedDate -= 1;
             [self setScrollView:_scrollViewDates atIndex:_selectedDate animated:YES];
             [self checkSelectDate];
-
         }
         
     } else if (touchY > (_lineDatesBottom.frame.origin.y)) {
-        
         if (_selectedDate < _dates.count - 1) {
             _selectedDate += 1;
             [self setScrollView:_scrollViewDates atIndex:_selectedDate animated:YES];
             [self checkSelectDate];
-
         }
     }
 }
 
 - (void)singleTapGestureHoursCaptured:(UITapGestureRecognizer *)gesture {
-    
     CGPoint touchPoint = [gesture locationInView:self];
     CGFloat touchY = touchPoint.y;
-    
     if (touchY < (_lineHoursTop.frame.origin.y)) {
-        
         if (_selectedHour > 0) {
             _selectedHour -= 1;
             [self setScrollView:_scrollViewHours atIndex:_selectedHour animated:YES];
             [self checkSelectDate];
-
         }
-        
     } else if (touchY > (_lineHoursBottom.frame.origin.y)) {
-        
         if (_selectedHour < self.hours.count - 1) {
             _selectedHour += 1;
             [self setScrollView:_scrollViewHours atIndex:_selectedHour animated:YES];
             [self checkSelectDate];
-
         }
     }
 }
@@ -1105,15 +1066,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     [self setScrollView:scrollView atIndex:index animated:YES];
     
     NSDate *selectedDate = [self getDate];
-//    if (self.datePickerMode != MRJDatePickerModeDateAndTime && self.datePickerMode != MRJDatePickerModeTime) {
-//        if ([selectedDate compare:self.minimumDate] == NSOrderedAscending) {
-//            [self setDate:self.minimumDate animated:YES];
-//        }
-//        
-//        if ([selectedDate compare:self.maximumDate] == NSOrderedDescending) {
-//            [self setDate:self.maximumDate animated:YES];
-//        }
-//    }
     [self checkSelectDate];
     if ([self.delegate respondsToSelector:@selector(datePicker:dateDidChange:)]) {
         [self.delegate datePicker:self dateDidChange:selectedDate];
@@ -1129,17 +1081,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     [self setScrollView:scrollView atIndex:index animated:YES];
     
     NSDate *selectedDate = [self getDate];
-//    if (self.datePickerMode != MRJDatePickerModeDateAndTime && self.datePickerMode != MRJDatePickerModeTime) {
-//        if ([selectedDate compare:self.minimumDate] == NSOrderedAscending) {
-//            [self setDate:self.minimumDate animated:YES];
-//            return;
-//        }
-//        
-//        if ([selectedDate compare:self.maximumDate] == NSOrderedDescending) {
-//            [self setDate:self.maximumDate animated:YES];
-//            return;
-//        }
-//    }
     
     [self checkSelectDate];
     
@@ -1631,7 +1572,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 - (NSLocale *)locale {
     if (!_locale) {
-        _locale = [NSLocale currentLocale];
+        _locale = [NSLocale localeWithLocaleIdentifier:@"zh-CN"];//[NSLocale currentLocale];手机时区
     }
     return _locale;
 }
@@ -1658,6 +1599,5 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _maximumDate = date;
     [self setupControl];
 }
-
 
 @end

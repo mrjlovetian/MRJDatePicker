@@ -50,10 +50,12 @@ typedef NS_ENUM(NSInteger,MRJDatePickerMode) {
  *  default is [NSCalendar currentCalendar]. setting nil returns to default
  */
 @property(nonatomic,copy)   NSCalendar    *calendar;
+
 /**
  *   default is nil. use current time zone or time zone from calendar
  */
 @property(nonatomic,strong) NSTimeZone    *timeZone;
+
 /**
  *  read only property, indicate in datepicker is open.
  */

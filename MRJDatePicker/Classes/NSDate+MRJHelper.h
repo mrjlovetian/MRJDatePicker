@@ -66,10 +66,11 @@
 
 - (NSDate *)destinationDateNow;
 
-///服务端时间转成本地时间，时区发生改变
+/// 服务端时间转成本地时间，时区发生改变
 + (NSString *)handleServerTime:(NSString *)serverTime;
 + (NSDate *)dateFormServerTime:(NSString *)serverTime;
 
-///比较两个时间月份的差值
+/// 比较两个时间月份的差值
 - (NSInteger)getTwoDateWithMonthFirstDate:(NSDate *)firstDate SecondDate:(NSDate *)secondDate;
+ 
 @end

@@ -374,8 +374,7 @@ static NSDateFormatter *displayFormatter;
     return destinationDateNow;
 }
 
-+(NSDate *)dateFormServerTime:(NSString *)serverTime
-{
++ (NSDate *)dateFormServerTime:(NSString *)serverTime {
     if (serverTime.length > 19) {
         serverTime = [serverTime substringToIndex:19];
     }
@@ -410,8 +409,7 @@ static NSDateFormatter *displayFormatter;
 }
 
 ///服务端时间转成本地时间，时区发生改变
-+ (NSString *)handleServerTime:(NSString *)serverTime
-{
++ (NSString *)handleServerTime:(NSString *)serverTime {
     if (serverTime.length > 19) {
         serverTime = [serverTime substringToIndex:19];
     }
@@ -448,8 +446,7 @@ static NSDateFormatter *displayFormatter;
     return phoneTime;
 }
 
-- (NSInteger)getTwoDateWithMonthFirstDate:(NSDate *)firstDate SecondDate:(NSDate *)secondDate
-{
+- (NSInteger)getTwoDateWithMonthFirstDate:(NSDate *)firstDate SecondDate:(NSDate *)secondDate {
 
     NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     //月
@@ -457,5 +454,7 @@ static NSDateFormatter *displayFormatter;
     NSDateComponents *compsMonth = [calender components:month fromDate:firstDate toDate:secondDate options:0];
     return [compsMonth month];
 }
+
 #pragma clang diagnostic pop
+
 @end
