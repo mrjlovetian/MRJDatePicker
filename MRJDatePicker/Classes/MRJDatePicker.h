@@ -18,11 +18,13 @@ typedef NS_ENUM(NSInteger,MRJDatePickerMode) {
 
 @class MRJDatePicker;
 
-@protocol MRJDatePickerDelegate<NSObject>
+@protocol MRJDatePickerDelegate <NSObject>
+
 @optional
 - (void)datePicker:(MRJDatePicker *)datePicker dateDidChange:(NSDate *)date;
 - (void)datePicker:(MRJDatePicker *)datePicker didCancel:(UIButton *)sender;
 - (void)datePicker:(MRJDatePicker *)dataPicker didSelectedDate:(NSDate *)date;
+
 @end
 
 @interface MRJDatePicker : UIControl
@@ -78,4 +80,5 @@ typedef NS_ENUM(NSInteger,MRJDatePickerMode) {
 - (void)show;
 
 - (void)dismiss;
+
 @end

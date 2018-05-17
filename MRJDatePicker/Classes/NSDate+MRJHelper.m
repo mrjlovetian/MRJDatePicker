@@ -326,6 +326,7 @@ static NSDateFormatter *displayFormatter;
 + (NSString *)datetimeFormatString {
 	return @"yyyy-MM-dd HH:mm:ss";
 }
+
 + (NSString *)dateFormatString {
 	return @"yyyy-MM-dd";
 }
@@ -343,8 +344,7 @@ static NSDateFormatter *displayFormatter;
 	return [NSDate timestampFormatString];
 }
 
-- (BOOL)isSameDay:(NSDate*)date1
-{
+- (BOOL)isSameDay:(NSDate*)date1 {
     NSCalendar* calendar = [NSCalendar currentCalendar];
     
     unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
@@ -356,8 +356,7 @@ static NSDateFormatter *displayFormatter;
     [comp1 year]  == [comp2 year];
 }
 
-- (NSDate *)destinationDateNow
-{
+- (NSDate *)destinationDateNow {
     //设置源日期时区
     NSDate *anyDate = self;
     NSTimeZone* sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];//或GMT

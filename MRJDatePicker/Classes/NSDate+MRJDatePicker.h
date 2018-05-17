@@ -11,15 +11,12 @@
 extern NSString *const kDateFormatYYYYMMDD;
 extern NSString *const kDateFormatYYMMDDTHHmmss;
 
-
 @interface NSDate (MRJDatePicker)
 
 + (NSDateFormatter *)shareDateFormatter;
 
 - (NSInteger)daysBetween:(NSDate *)aDate;
-
 - (NSDate *)dateByAddingDays:(NSInteger)days;
-
 - (NSString *)stringForFormat:(NSString *)format;
 
 

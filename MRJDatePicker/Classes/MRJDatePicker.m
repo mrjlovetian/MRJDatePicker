@@ -104,7 +104,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 @implementation MRJDatePicker
 
-
 #pragma mark - Initializers
 
 - (instancetype)initWithSuperView:(UIView*)superView {
@@ -316,7 +315,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     for (int i = 0; i < self.months.count; i++) {
         
         NSString *day = (NSString*)[self.months objectAtIndex:i];
-        
         UILabel *labelDay = [[UILabel alloc] initWithFrame:CGRectMake(0.0, (i * kMRJDatePickerScrollViewItemHeight) + offsetContentScrollView, _scrollViewMonths.frame.size.width, kMRJDatePickerScrollViewItemHeight)];
         labelDay.text = day;
         labelDay.font = kMRJDatePickerLabelFont;
@@ -352,7 +350,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 - (void)buildSelectorYearsOffsetX:(CGFloat)x andWidth:(CGFloat)width {
     
     // ScrollView Years
-    
     _scrollViewYears = [[UIScrollView alloc] initWithFrame:CGRectMake(x, kMRJDatePickerHeaderHeight + kMRJDatePickerHeaderBottomMargin, width, self.frame.size.height - kMRJDatePickerHeaderHeight - kMRJDatePickerHeaderBottomMargin)];
     _scrollViewYears.tag = ScrollViewTagValue_YEARS;
     _scrollViewYears.delegate = self;
@@ -385,7 +382,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     for (int i = 0; i < _years.count; i++) {
         
         NSString *day = (NSString*)[_years objectAtIndex:i];
-        
         UILabel *labelDay = [[UILabel alloc] initWithFrame:CGRectMake(0.0, (i * kMRJDatePickerScrollViewItemHeight) + offsetContentScrollView, _scrollViewYears.frame.size.width, kMRJDatePickerScrollViewItemHeight)];
         labelDay.text = day;
         labelDay.font = kMRJDatePickerLabelFont;
@@ -523,9 +519,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _labelsHours = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < self.hours.count; i++) {
-        
         NSString *hour = (NSString*)[self.hours objectAtIndex:i];
-        
         UILabel *labelHour = [[UILabel alloc] initWithFrame:CGRectMake(0, (i * kMRJDatePickerScrollViewItemHeight) + offsetContentScrollView, _scrollViewHours.frame.size.width, kMRJDatePickerScrollViewItemHeight)];
         labelHour.text = hour;
         labelHour.font = kMRJDatePickerLabelFont;
@@ -591,9 +585,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _labelsMinutes = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < self.minutes.count; i++) {
-        
         NSString *minute = (NSString*)[self.minutes objectAtIndex:i];
-        
         UILabel *labelMinute = [[UILabel alloc] initWithFrame:CGRectMake(0, (i * kMRJDatePickerScrollViewItemHeight) + offsetContentScrollView, _scrollViewMinutes.frame.size.width, kMRJDatePickerScrollViewItemHeight)];
         labelMinute.text = minute;
         labelMinute.font = kMRJDatePickerLabelFont;
@@ -705,7 +697,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 - (void)actionButtonValid:(UIButton *)sender {
     
     [self dismiss];
-    
     if ([self.delegate respondsToSelector:@selector(datePicker:didSelectedDate:)]) {
         [self.delegate datePicker:self didSelectedDate:[self getDate]];
     }
@@ -713,7 +704,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 #pragma mark - Show and Dismiss
 
--(void)show {
+- (void)show {
     
     if (!_superView) return;
     
@@ -769,8 +760,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     }];
 }
 
--(void)dismiss {
-    
+- (void)dismiss {
     if (!_superView) return;
     [UIView animateWithDuration:kMRJDatePickerAnimationDuration delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.frame = CGRectMake(self.frame.origin.x, _superView.frame.size.height, self.frame.size.width, self.frame.size.height);
@@ -791,10 +781,8 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 #pragma mark - Collections
 
-- (NSMutableArray*)getYears {
-    
+- (NSMutableArray *)getYears {
     NSMutableArray *years = [[NSMutableArray alloc] init];
-    
     NSInteger yearMin = 0;
     
     if (self.minimumDate) {
@@ -823,7 +811,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     return years;
 }
 
-- (NSMutableArray*)getDates {
+- (NSMutableArray *)getDates {
     NSMutableArray *dates = [[NSMutableArray alloc] init];
     
     if (self.minimumDate && self.maximumDate) {
@@ -1255,7 +1243,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     }
 }
 
-- (NSDate*)convertToDateDay:(NSInteger)day month:(NSInteger)month year:(NSInteger)year hours:(NSInteger)hours minutes:(NSInteger)minutes seconds:(NSInteger)seconds {
+- (NSDate *)convertToDateDay:(NSInteger)day month:(NSInteger)month year:(NSInteger)year hours:(NSInteger)hours minutes:(NSInteger)minutes seconds:(NSInteger)seconds {
     
     NSMutableString *dateString = [[NSMutableString alloc] init];
     
@@ -1409,7 +1397,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     return [dateFormatter dateFromString:dateString];
 }
 
-- (NSDate*)getDate {
+- (NSDate *)getDate {
     if (self.datePickerMode == MRJDatePickerModeDateAndTime) {
         return [self convertToDate:_selectedDate hours:_selectedHour minutes:_selectedMinute seconds:_selectedSecond];
     }
@@ -1512,7 +1500,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     return _months;
 }
 
-- (NSMutableArray*)hours {
+- (NSMutableArray *)hours {
     if (!_hours) {
         NSMutableArray *hours = [[NSMutableArray alloc] init];
         
@@ -1528,7 +1516,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     return _hours;
 }
 
-- (NSMutableArray*)minutes {
+- (NSMutableArray *)minutes {
     if (!_minutes) {
         NSMutableArray *minutes = [[NSMutableArray alloc] init];
         /**
@@ -1547,7 +1535,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     return _minutes;
 }
 
-- (NSMutableArray*)seconds {
+- (NSMutableArray *)seconds {
     if (!_seconds) {
         
         NSMutableArray *seconds = [[NSMutableArray alloc] init];
@@ -1587,7 +1575,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     [self setupControl];
 }
 
-- (void)setMinimumDate:(NSDate*)date {
+- (void)setMinimumDate:(NSDate *)date {
     _minimumDate = date;
     NSDateComponents* componentsMin = [self.calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:_minimumDate];
     NSInteger yearMin = [componentsMin year];
@@ -1595,7 +1583,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     [self setupControl];
 }
 
-- (void)setMaximumDate:(NSDate*)date {
+- (void)setMaximumDate:(NSDate *)date {
     _maximumDate = date;
     [self setupControl];
 }

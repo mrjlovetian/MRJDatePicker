@@ -53,7 +53,6 @@ NSString * const kDateFormatYYMMDDTHHmmss = @"yyyy-MM-dd'T'HH:mm:ss";
     
     NSDateFormatter *formatter = [NSDate shareDateFormatter];
     [formatter setDateFormat:format];
-    
     NSString *timeStr = [formatter stringFromDate:self];
     return timeStr;
 }
