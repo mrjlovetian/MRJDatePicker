@@ -61,7 +61,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     ScrollViewTagValue_MINUTES = 5,
     ScrollViewTagValue_SECONDS = 6,
     ScrollViewTagValue_DATES = 7,
-    
 };
 
 @interface MRJDatePicker ()<UIScrollViewDelegate> {
@@ -106,7 +105,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 #pragma mark - Initializers
 
-- (instancetype)initWithSuperView:(UIView*)superView {
+- (instancetype)initWithSuperView:(UIView *)superView {
     if (self = [super initWithFrame:CGRectMake(0.0, superView.frame.size.height, superView.frame.size.width, kMRJDatePickerHeight)]) {
         _datePickerMode = MRJDatePickerModeDate;
         [superView addSubview:self];
@@ -313,7 +312,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     _labelsMonths = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < self.months.count; i++) {
-        
         NSString *day = (NSString*)[self.months objectAtIndex:i];
         UILabel *labelDay = [[UILabel alloc] initWithFrame:CGRectMake(0.0, (i * kMRJDatePickerScrollViewItemHeight) + offsetContentScrollView, _scrollViewMonths.frame.size.width, kMRJDatePickerScrollViewItemHeight)];
         labelDay.text = day;

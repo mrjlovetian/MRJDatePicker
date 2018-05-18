@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger,MRJDatePickerMode) {
 @optional
 - (void)datePicker:(MRJDatePicker *)datePicker dateDidChange:(NSDate *)date;
 - (void)datePicker:(MRJDatePicker *)datePicker didCancel:(UIButton *)sender;
-- (void)datePicker:(MRJDatePicker *)dataPicker didSelectedDate:(NSDate *)date;
+- (void)datePicker:(MRJDatePicker *)datePicker didSelectedDate:(NSDate *)date;
 
 @end
 

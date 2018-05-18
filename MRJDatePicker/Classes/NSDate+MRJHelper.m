@@ -89,57 +89,44 @@ static NSDateFormatter *displayFormatter;
 	return [weekdayComponents weekday];
 }
 
-
 - (NSString *)weekDayName{
     NSDateComponents *weekdayComponents = [calendar components:(NSWeekdayCalendarUnit) fromDate:self];
     NSInteger  NSIntegerweekday = [weekdayComponents weekday]; // 星期几（注意，周日是“1”，周一是“2”。。。。）
     
     NSString *tempStr;
-    if(NSIntegerweekday == 1)
-    {
-        tempStr =@"Sunday";
-    }
-    if(NSIntegerweekday == 2)
-    {
-        tempStr =@"Monday";
+    
+    switch (NSIntegerweekday) {
+        case 1:
+            tempStr =@"Sunday";
+            break;
         
-    }
-    if(NSIntegerweekday == 3)
-    {
-        tempStr =@"Tuesday";
-        
-    }
-    if(NSIntegerweekday == 4)
-    {
-        tempStr =@"Wednesday";
-        
-    }
-    if(NSIntegerweekday == 5)
-    {
-        tempStr =@"Thursday";
-        
-    }
-    if(NSIntegerweekday == 6)
-    {
-        tempStr =@"Friday";
-        
-    }
-    if(NSIntegerweekday == 7)
-    {
-        tempStr =@"Saturday";
-        
+        case 2:
+            tempStr =@"Monday";
+            break;
+        case 3:
+            tempStr =@"Tuesday";
+            break;
+        case 4:
+            tempStr =@"Wednesday";
+            break;
+        case 5:
+            tempStr =@"Thursday";
+            break;
+        case 6:
+            tempStr =@"Friday";
+            break;
+        case 7:
+            tempStr =@"Saturday";
+            break;
+        default:
+            break;
     }
     
     return tempStr;
 
 }
 
-
-
-
-
-
-+ (NSDate *)deserializeJsonDateString: (NSString *)jsonDateString
++ (NSDate *)deserializeJsonDateString:(NSString *)jsonDateString
 {
     NSInteger offset = [[NSTimeZone defaultTimeZone] secondsFromGMT]; //get number of seconds to add or subtract according to the client default time zone
     
