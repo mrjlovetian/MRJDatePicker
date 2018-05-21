@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRJDatePicker'
-  s.version          = '0.1.0.5'
+  s.version          = '0.1.0.6'
   s.summary          = 'TIME STICK PICKVER'
   
 
