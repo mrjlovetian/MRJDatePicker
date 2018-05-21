@@ -75,8 +75,7 @@ NSString * const kDateFormatYYMMDDTHHmmss = @"yyyy-MM-dd'T'HH:mm:ss";
 
 @implementation NSCalendar (AT)
 
-+ (instancetype)sharedCalendar
-{
++ (instancetype)sharedCalendar {
     static id instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

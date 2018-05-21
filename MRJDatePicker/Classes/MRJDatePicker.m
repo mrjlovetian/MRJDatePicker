@@ -1006,7 +1006,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
             _selectedSecond -= 1;
             [self setScrollView:_scrollViewSeconds atIndex:_selectedSecond animated:YES];
             [self checkSelectDate];
-
         }
         
     } else if (touchY > (_lineSecondsBottom.frame.origin.y)) {
@@ -1244,7 +1243,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 - (NSDate *)convertToDateDay:(NSInteger)day month:(NSInteger)month year:(NSInteger)year hours:(NSInteger)hours minutes:(NSInteger)minutes seconds:(NSInteger)seconds {
     
     NSMutableString *dateString = [[NSMutableString alloc] init];
-    
     NSDateFormatter *dateFormatter = self.dateFormatter;
     if (self.timeZone) [dateFormatter setTimeZone:self.timeZone];
     [dateFormatter setLocale:self.locale];
@@ -1271,7 +1269,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     
     // Time Mode :
     if (self.datePickerMode == MRJDatePickerModeTime) {
-        
         NSDateComponents* components = [self.calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
         
         NSInteger nowDay = [components day];
@@ -1363,7 +1360,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     return [dateFormatter dateFromString:dateString];
 }
 
-- (NSDate*)convertToDate:(NSInteger)days hours:(NSInteger)hours minutes:(NSInteger)minutes seconds:(NSInteger)seconds {
+- (NSDate *)convertToDate:(NSInteger)days hours:(NSInteger)hours minutes:(NSInteger)minutes seconds:(NSInteger)seconds {
     
     NSDate *date = [self.minimumDate dateByAddingDays:days];
     
@@ -1501,7 +1498,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 - (NSMutableArray *)hours {
     if (!_hours) {
         NSMutableArray *hours = [[NSMutableArray alloc] init];
-        
         for (int i = 0; i < 24; i++) {
             if (i < 10) {
                 [hours addObject:[NSString stringWithFormat:@"0%d%@", i, @"时"]];
@@ -1526,7 +1522,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
             } else {
                 [minutes addObject:[NSString stringWithFormat:@"%d%@", i * 10, @"分"]];
             }
-            
         }
         _minutes = minutes;
     }
@@ -1535,9 +1530,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 - (NSMutableArray *)seconds {
     if (!_seconds) {
-        
         NSMutableArray *seconds = [[NSMutableArray alloc] init];
-        
         for (int i = 0; i < 60; i++) {
             if (i < 10) {
                 [seconds addObject:[NSString stringWithFormat:@"0%d", i]];
@@ -1549,6 +1542,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     }
     return _seconds;
 }
+
 - (NSTimeZone *)timeZone {
     if (!_timeZone) {
         _timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];

@@ -8,8 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRJDatePicker'
-  s.version          = '0.1.0.4'
+  s.version          = '0.1.0.5'
   s.summary          = 'TIME STICK PICKVER'
+  
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

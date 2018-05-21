@@ -139,10 +139,6 @@ static NSDateFormatter *displayFormatter;
     return date;
 }
 
-
-
-
-
 + (NSDate *)dateFromString:(NSString *)string {
 	return [NSDate dateFromString:string withFormat:[NSDate dbFormatString]];
 }
